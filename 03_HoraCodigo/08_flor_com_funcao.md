@@ -22,11 +22,11 @@ def desenhe_uma_flor():
 
 
 # chamando a função (apenas na chamada que a função é executada)
-desenhe_um_flor()
+desenhe_uma_flor()
 ```
 
 Use-a para desenhar essas flores juntamente com os novos blocos
-```turtle.penup``` e ```turtle.pendown```, que levantam e abaixam a caneta
+```turtle.penup()``` e ```turtle.pendown()```, que levantam e abaixam a caneta
 respectivamente. Isso permite a tartaruga movimentar-se sem desenhar. Dica: as
 flores são separadas por 150 pixels.
 
@@ -39,11 +39,11 @@ flores são separadas por 150 pixels.
 
 ```turtle = turtle.Turtle()```
 
-```turtle.forward(100)```
+```turtle.forward(???)```
 
-```turtle.left(90)```
+```turtle.left(???)```
 
-```turtle.right(90)```
+```turtle.right(???)```
 
 ```turtle.penup()```
 
