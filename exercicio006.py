@@ -14,5 +14,5 @@ for _ in [1, 2, 3]:
     turtle.right(120)
 
 for _ in [1, 2, 3, 4]:
-  turtle.left(90)
   turtle.forward(100)
+  turtle.right(90)

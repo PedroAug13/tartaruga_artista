@@ -8,14 +8,18 @@ Exercícios
 """
 
 import turtle
+import random
 
 turtle = turtle.Turtle()
-turtle.color('red')
+colors = ['red','blue','green','yellow','purple','magenta','pink']
+turtle.pensize(3)
 
 for _ in [1, 2, 3]:
-    turtle.forward(100)
-    turtle.right(120)
+	turtle.color(random.choice(colors))
+	turtle.forward(95)
+	turtle.right(120)
 
 for _ in [1, 2, 3, 4]:
-  turtle.forward(100)
-  turtle.right(90)
+	turtle.color(random.choice(colors))
+	turtle.forward(95)
+	turtle.right(90)

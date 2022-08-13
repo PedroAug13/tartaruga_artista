@@ -9,12 +9,14 @@ Exercícios
 import turtle
 
 turtle = turtle.Turtle()
-turtle.color('red')
-turtle.forward(100)
+turtle.shape('turtle')
+turtle.color('blue')
+
+turtle.forward(200)
 turtle.left(90)
-turtle.forward(100)
+turtle.forward(200)
 turtle.left(90)
-turtle.forward(100)
+turtle.forward(200)
 turtle.left(90)
-turtle.forward(100)
+turtle.forward(200)
 

@@ -13,8 +13,10 @@ import turtle
 import random
 
 turtle = turtle.Turtle()
-colors = ['red', 'purple', 'blue']
+colors = ['yellow','green','purple','blue']
+turtle.pensize(3)
 
+turtle.left(60)
 for _ in [1, 2, 3]:
     color = random.choice(colors)
     turtle.color(color)
