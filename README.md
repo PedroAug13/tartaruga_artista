@@ -40,3 +40,17 @@ plataforma Code.org](https://studio.code.org/s/artist/lessons/1/levels/1).
 1. [Exercício 8](exercicio008.py)
 1. [Exercício 9](exercicio009.py)
 1. [Exercício 10](exercicio010.py)
+
+### Indo além de andar e pintar
+
+Os exercícios desenvolvidos até aqui focaram em movimentar a tartaruga,
+produzindo desenhos conforme ela vai caminhando. Porém, em um contexto de jogos,
+são necessários outros recursos, tais como interação com usuário, redimensionamento
+e outras configurações da tela, posicionamento da tartatura, e assim por diante.
+Nessa seção, veremos detalhes desses tópicos.
+
+1. [Movimentação e Posição](/04_indo_alem/01_movimentacao.md)
+1. [Desenho](/04_indo_alem/02_desenho.md)
+1. [Caneta](/04_indo_alem/03_caneta.md)
+1. [Respondendo a eventos](/04_indo_alem/04_respondendo_eventos.md)
+1. [Criando figuras](/04_indo_alem/05_criando_figuras.md)
