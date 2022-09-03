@@ -10,11 +10,11 @@ Exercícios
 import turtle
 
 turtle = turtle.Turtle()
-turtle.pensize(3)
+turtle.pensize(4)
 turtle.shape('arrow')
 
 for quadrados in range(2):
-	for color in ['black','pink','blue','red']:
+	for color in ['red','pink','blue','black']:
 		turtle.color(color)
 		turtle.forward(100)
 		turtle.right(90)

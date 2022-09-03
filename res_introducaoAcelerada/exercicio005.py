@@ -15,11 +15,13 @@ colors = ['red','blue','green','yellow','purple','magenta','pink']
 turtle.pensize(3)
 
 for _ in [1, 2, 3]:
-	turtle.color(random.choice(colors))
-	turtle.forward(95)
-	turtle.right(120)
-
+    turtle.shape("circle")
+    turtle.color(random.choice(colors))
+    turtle.forward(155)
+    turtle.right(120)
+turtle.forward(-20)
 for _ in [1, 2, 3, 4]:
-	turtle.color(random.choice(colors))
-	turtle.forward(95)
-	turtle.right(90)
+    turtle.shape("turtle")
+    turtle.color(random.choice(colors))
+    turtle.forward(195)
+    turtle.right(90)

@@ -22,7 +22,6 @@ for _ in range(4):
 	turtle.shape('turtle')
 	turtle.left(90)
 	turtle.forward(100)
-
 for _ in range(4):
 	turtle.color('pink')
 	turtle.shape('square')

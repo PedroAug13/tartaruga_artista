@@ -13,7 +13,7 @@ import turtle
 import random
 
 turtle = turtle.Turtle()
-colors = ['yellow','green','purple','blue']
+colors = ['yellow','green','purple','blue','black','magenta']
 turtle.pensize(3)
 
 turtle.left(60)

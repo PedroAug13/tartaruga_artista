@@ -16,7 +16,7 @@ colors = ['red','magenta','lime','black','purple', 'blue', 'yellow', 'green', 'p
 for _ in range (37):
     color = random.choice(colors)
     turtle.color(color)
-    turtle.forward(140)
-    turtle.backward(140)
+    turtle.forward(180)
+    turtle.backward(180)
     turtle.right(10)
 
