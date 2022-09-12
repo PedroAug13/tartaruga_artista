@@ -11,22 +11,42 @@ import turtle
 
 turtle = turtle.Turtle()
 
+
 for _ in range(4):	
 	turtle.color('red')	
 	turtle.shape('arrow')
 	turtle.forward(100)
 	turtle.right(90)
 
+turtle.penup()
+turtle.backward(20)
+turtle.left(90)
+turtle.forward(20)
+turtle.right(90)
+turtle.pendown()
+
 for _ in range(4):
 	turtle.color('blue')
 	turtle.shape('turtle')
 	turtle.left(90)
 	turtle.forward(100)
+
+turtle.penup()
+turtle.forward(20)
+turtle.pendown()
+
 for _ in range(4):
 	turtle.color('pink')
 	turtle.shape('square')
 	turtle.forward(100)
 	turtle.left(90)
+
+turtle.penup()
+turtle.backward(20)
+turtle.right(90)
+turtle.forward(20)
+turtle.left(90)
+turtle.pendown()
 
 for _ in range(4):
 	turtle.color('purple')
@@ -34,3 +54,15 @@ for _ in range(4):
 	turtle.right(90)
 	turtle.forward(100)
 
+turtle.penup()
+turtle.backward(110)
+turtle.right(90)
+turtle.forward(110)
+turtle.left(90)
+turtle.pendown()
+
+for _ in range(4):
+    turtle.color("green")
+    turtle.shape("square")
+    turtle.forward(240)
+    turtle.left(90)
