@@ -72,6 +72,17 @@ def decrease_pensize():
         state['size'] = size
 
 def draw_shape(x, y):
+    shape = state['shape']
+    end = vector(x, y)
+    goto_position(start,end)
+    if state['fill'] == True:
+        begin_fill()
+        shape(start, end)
+        end_fill()
+    else:
+        shape(start, end)
+
+def tap(x, y):
     """Store starting point or draw shape."""
     start = state['start']
 
@@ -79,22 +90,14 @@ def draw_shape(x, y):
         # state['start'] = vector(x, y)
         store('start', vector(x, y))
     else:
-        shape = state['shape']
-        end = vector(x, y)
-        goto_position(start,end)
-        if state['fill'] == True:
-            begin_fill()
-            shape(start, end)
-            end_fill()
-        else:
-            shape(start, end)
+        draw_shape(...)
         # state['start'] = None
         store('start', None)
 
 state = {'start': None, 'shape': line, 'size': 1, 'fill': True}
 
 setup(1600, 900)
-onscreenclick(draw_shape)
+onscreenclick(tap)
 listen()
 onkey(undo, 'u')
 onkey(toggle_fill, 'f')
