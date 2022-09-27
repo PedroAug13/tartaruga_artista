@@ -2,19 +2,11 @@
 
 Exercises
 
-. Change the board.
-. Change the number of ghosts.
-. Change where pacman starts.
-. Make the ghosts faster/slower.
+1. Change the board.
+2. Change the number of ghosts.
+3. Change where pacman starts.
+4. Make the ghosts faster/slower.
 5. Make the ghosts smarter.
-
-
-. Mude as cores
-2. Os vetores de referências estão espalhados pelo código, caso seja preciso modificá-los, terá de fazer em múltiplos locais. Você deverá criar constantes com esses valores e utilizadas no lugar
-. O código possui uma linha com for index in range(len(tiles)):. O uso de range(len(tiles)) é uma má prática. Melhore esse código utilizando a função embutida enumerate(iterable, start=0)
-. Identifique a variável responsável por escrever a pontuação. Análise se poderia ter um melhor nome e mude se for o caso
-. Faça o jogo parar caso Pacman coma todas as frutinhas, exibindo alguma indicação de Winner!
-
 """
 
 from random import choice
@@ -27,13 +19,15 @@ path = Turtle(visible=False)
 writer = Turtle(visible=False)
 aim = vector(5, 0)
 pacman = vector(-80, -80)
+
+"""
 ghosts = [
     [vector(-180, 160), vector(5, 0)],
     [vector(-180, -160), vector(0, 5)],
     [vector(100, 160), vector(0, -5)],
     [vector(100, -160), vector(-5, 0)],
-    [vector(-180, -160), vector(0, 5)],
 ]
+"""
 # fmt: off
 
 tiles = [
@@ -58,8 +52,27 @@ tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 ]
-
 # fmt: on
+
+def change_directions(x, y):
+    directions = [
+            vector(x, 0),
+            vector(-x, 0),
+            vector(0, y),
+            vector(0, -y),
+            ]
+    return choice(directions)
+
+
+def ghosts_state(coord_x, coord_y, heading_x, heading_y):
+    positions_headings = [
+        [vector(-coord_x, coord_y), change_directions(heading_x, heading_y),],
+        [vector(-coord_x, -coord_y), change_directions(heading_x, heading_y),],
+        [vector(coord_x - 80, coord_y), change_directions(heading_x, heading_y),],
+        [vector(coord_x - 80, -coord_y), change_directions(heading_x, heading_y),],
+            ]
+
+    return positions_headings
 
 
 def square(x, y):
@@ -104,7 +117,7 @@ def world():
     bgcolor('black')
     path.color('blue')
 
-    for index, tile in enumerate(tiles):
+    for index in range(len(tiles)):
         tile = tiles[index]
 
         if tile > 0:
@@ -142,21 +155,18 @@ def move():
         writer.color('green')
         writer.write("Winner!")
         return
+    
     up()
     goto(pacman.x + 10, pacman.y + 10)
     dot(20, 'lime')
+    
+    ghosts = ghosts_state(180, 160, 1, 1)
 
     for point, course in ghosts:
         if valid(point + course):
             point.move(course)
         else:
-            options = [
-                vector(5, 0),
-                vector(-5, 0),
-                vector(0, 5),
-                vector(0, -5),
-            ]
-            plan = choice(options)
+            plan = change_directions(8,8)
             course.x = plan.x
             course.y = plan.y
 
@@ -170,7 +180,7 @@ def move():
         if abs(pacman - point) < 20:
             return
 
-    ontimer(move, 40)
+    ontimer(move, 100)
 
 
 def change(x, y):
