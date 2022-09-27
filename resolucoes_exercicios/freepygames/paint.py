@@ -73,6 +73,7 @@ def decrease_pensize():
 
 def draw_shape(x, y):
     shape = state['shape']
+    start = state['start']
     end = vector(x, y)
     goto_position(start,end)
     if state['fill'] == True:
@@ -90,7 +91,7 @@ def tap(x, y):
         # state['start'] = vector(x, y)
         store('start', vector(x, y))
     else:
-        draw_shape(...)
+        draw_shape(x, y)
         # state['start'] = None
         store('start', None)
 
