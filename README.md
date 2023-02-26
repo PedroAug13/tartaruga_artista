@@ -30,7 +30,7 @@ plataforma Code.org](https://studio.code.org/s/artist/lessons/1/levels/1).
 
 ### Introdução Acelerada à Ciência da Computação
 
-1. [Exercício 1](exercicio001.py) 
+1. [Exercício 1](exercicio001.py)
 1. [Exercício 2](exercicio002.py)
 1. [Exercício 3](exercicio003.py)
 1. [Exercício 4](exercicio004.py)
@@ -68,11 +68,42 @@ Nessa módulo estudaremos os jogos contidos em Free Python Games.
 
 ## Programação orientada a objetos
 
-Neste módulo estudaremos o paradigma de programaçãp orientada a objetos
+Neste módulo estudaremos o paradigma de programação orientada a objetos.
 
 1. [Introdução](/06_poo/01_poo_introducao.md)
 1. [Reconstruindo a classe vector](/06_poo/02_poo_vector.md)
 1. [Encapsulamento](/06_poo/03_poo_encapsulamento.md)
 1. [Reconstruindo a classe vector - Parte 2](/06_poo/04_poo_vector2.md)
 1. [Jogos em OO](/06_poo/05_poo_jogos.md)
-1. [Snake](/06_poo/06_poo_snake.md)
+1. [Snake OO](/06_poo/06_poo_snake.md)
+1. [Pacman OO](/06_poo/07_poo_pacman.md)
+
+## Projetos relacionados
+
+Existem alguns projetos que se relacionam de alguma forma com este. Seja porque
+utiliza uma metodologia de "altere o código", seja porque utiliza jogos, seja por
+outro motivo. Alguns desses projetos são:
+
+1. [Python Birds](https://github.com/pythonprobr/pythonbirds): é um clone do jogo
+Angry Birds também escrito em Python puro. Porém, ao contrário do Free Python
+Games, cujo código de cada jogo está contido em apenas um arquivo e não muito mais
+de 100 linhas, este projeto é mais complexo, no sentido de conter mais arquivos e
+classes que se relacionam entre si. Ao ponto de que para trabalhar adequadamente
+com ele é recomendando que se use um ambiente integrado de desenvolvimento, como
+PyCharm ou VS Code. Além do acesso ao código-fonte do projeto, também é possível
+ter acesso de forma gratuita ao curso em que este projeto é utilizado como primeiro
+módulo na plataforma [Python Pro](https://www.python.pro.br/curso-de-python-gratis)
+e acompanhar as vídeo-aulas.
+
+1. [Simple Board Games](https://github.com/rg-software/board-games): coleção de
+jogos de tabuleiros implementados em Python com [Pygame Zero](https://pygame-zero.readthedocs.io).
+Os jogos foram selecionados como possíveis exercícios para programadores em níveis
+iniciais de aprendizagem.
+
+1. [A Game Engine in Pure Python for CS1: Design, Experience, and Limits](https://doi.org/10.1145/2729094.2742590):
+projeto desenvolvido por pesquisadores da Universidade de Calgary. Inicialmente,
+foi criado um motor de jogos em Python puro, baseado em turtle. Em seguida,
+diversos jogos foram criados com este motor. O código-fonte do motor, com os jogos,
+está [disponível em um arquivo compactado](https://pages.cpsc.ucalgary.ca/~aycock/engine.tar.gz).
+
+Bons códigos.
